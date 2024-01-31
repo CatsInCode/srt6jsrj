@@ -1,0 +1,8 @@
+.background-image{position:fixed;top:0;left:0;width:100%;height:100%;background-image:url(image/BGMAIN.png);background-size:cover;background-position:center;z-index:-1}
+
+.rectangle {
+    width: 200px; /* Задайте нужную ширину */
+    height: 100px; /* Задайте нужную высоту */
+    border: 2px dashed #000; /* Задайте ширину и цвет пунктирной линии */
+    border-radius: 10px; /* Задайте радиус закругления углов */
+  }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @font-face {
+          font-family: font1;
+          src: url('fonts/SFProText-Regular.ttf');
+          font-weight: 400;
+          font-weight: normal;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: #f6bebeff;
+            overflow: hidden;
+        }
+
+        .background {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            pointer-events: none;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .overlay {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            pointer-events: none;
+            position: absolute;
+            z-index: 5;
+        }
+
+        #game {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="GUI.css">
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <title>Найди животных</title>
+</head>
+
+<body>
+    <div style="font-family:font1; position:absolute; left:-1000px; visibility:hidden;">.</div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 740" preserveAspectRatio="xMidYMid meet" class="background">
+        <image xlink:href="image/BG.svg" width="470" height="740" class="background"/>
+    </svg>
+    <div id="game"></div>
+    <script src="game.js" type="module"></script>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 740" preserveAspectRatio="xMidYMid meet" class="overlay">
+        <image xlink:href="image/BG2.svg" width="470" height="740" class="overlay" />
+    </svg>
+</body>
+
+</html>
